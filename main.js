@@ -1,20 +1,19 @@
 const container = document.createElement("div");
 container.classList.add("container");
 container.style.border = "thick solid green";
-document.body.querySelector("div").style.backgroundColor = "red";
-
 container.style.display = "flex";
 container.style.flexDirection = "column";
 container.style.padding = "0";
 container.style.alignContent = "center";
 container.style.alignSelf = "center";
 container.innerText = "Why?";
-container.addEventListener("mouseover", ()=>container.style.backgroundColor="green");
+container.addEventListener("mouseover", mouseOver);
 document.body.appendChild(container);
 
 let times = prompt("Size?", "10");
+
 function mouseOver() {
-    container.querySelector("div").style.backgroundColor = "red";
+    event.target.style.backgroundColor = "red";
 
 }
 
